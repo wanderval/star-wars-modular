@@ -1,3 +1,4 @@
+
 ########## StarWars
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.4.
@@ -43,6 +44,7 @@ o This page should be accessible by clicking in the list item and by url:
 o On character detail, species should be shown.
 o On starship detail, pilots should be listed.
 o Clicking in the pilot should redirect to the character detail.
+
 ##Non-functional requirements
 - You must use Angular 4+.
 - Angular CLI is allowed.
@@ -55,11 +57,13 @@ o Clicking in the pilot should redirect to the character detail.
 - The code must be delivered on GitHub or Bit Bucket.
 - The app should contain a read me file explaining how to setup the environment and how to launch the application.
 * You are free to decide and define points not covered by these requirements.
+
 ##Bonus items
 - Unit tests;
 - Functional tests;
 - Configuration files;
 - Lazy loading;
+
 ##Evaluation Criteria
 - Functional and Non Functional Requirements
 - Code Quality
