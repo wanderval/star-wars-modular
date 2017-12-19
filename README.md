@@ -74,3 +74,6 @@ o This page should be accessible by clicking in the list item and by url:
 * Documentation
 
 # Requirement
+* NodeJS
+* Git
+* Angular-CLI
