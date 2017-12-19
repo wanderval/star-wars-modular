@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
+import { mergeMap } from "rxjs/operators/mergeMap";
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/do';
+
 
 import { Character } from './character';
 import { ErrorHandler } from '../app.error-handler';
@@ -23,11 +25,17 @@ export class CharacterService {
     }
 
     getCharacter(id: number): Observable<Character> {
-        console.log(this.url +'/' + id + '/');
         return this._http
-        .get(this.url +'/' + id)
-        .map((response: Response) => response.json())
-        .catch(ErrorHandler.handlerError);
+            .get(this.url +'/' + id)
+            .map((response: Response) => response.json())
+            .catch(ErrorHandler.handlerError);
+    }
+
+    getCharacterSpecie(url: string) {
+        return this._http
+            .get(url)
+            .map((response: Response) => response.json())
+            .catch(ErrorHandler.handlerError);
     }
 
 }

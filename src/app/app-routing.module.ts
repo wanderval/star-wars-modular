@@ -2,6 +2,7 @@ import { NgModule, ModuleWithProviders } from '@angular/core/src/metadata/ng_mod
 import { Routes, RouterModule} from '@angular/router';
 
 import { StarshipComponent } from './starship/starship.component';
+import { StarshipDetailComponent } from './starship/starship-detail/starship-detail.component';
 import { CharacterComponent } from './character/character.component';
 import { CharacterDetailComponent } from './character/character-detail/character-detail.component';
 import { HomeComponent } from './home/home.component';
@@ -10,6 +11,7 @@ const APP_ROUTES: Routes = [
     { path: 'character', component: CharacterComponent },
     { path: 'character/:id', component: CharacterDetailComponent },
     { path: 'starship', component: StarshipComponent },
+    { path: 'starship/:id', component: StarshipDetailComponent },
     { path: '', component: HomeComponent }
 ];
 

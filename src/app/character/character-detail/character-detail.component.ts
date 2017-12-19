@@ -11,23 +11,35 @@ import { Character } from '../character';
 export class CharacterDetailComponent implements OnInit {
 
   id: number;
-  character: Character;
-  constructor(
-    private route: ActivatedRoute,
-    private _characterService: CharacterService
-  ) { }
+  title: string;
+  dataCharacter: any = {
+    character: null,
+    specie: null
+  };
+
+  constructor(private route: ActivatedRoute, private _characterService: CharacterService) {
+    this.title = 'Character Detail';
+   }
+
 
   ngOnInit() {
+    // get parameter id
     this.route.params.subscribe(
       (params: any) => {
         this.id = parseInt(params['id']);
       }
     );
 
+
     this._characterService.getCharacter(this.id).subscribe(
-      (character: Character) => {
-        this.character = character;
-      });
+        character => {
+
+          this.dataCharacter.character = character;
+          this._characterService.getCharacterSpecie(character['species'][0]).subscribe(specie => {
+            this.dataCharacter.specie = specie;
+          })
+      }
+    );
   }
 
 }

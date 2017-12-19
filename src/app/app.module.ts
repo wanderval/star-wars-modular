@@ -7,10 +7,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CharacterService } from './character/character.service';
 import { UtilsService } from './shared/utils.service';
-// import { FilterByName } from './character/character.pipe';
-// import { StarshipService } from './starship/starship.service';
 
-//import { AppRoutingModule } from './app-routing.module';
 import { routing } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { CharacterModule } from './character/character.module';
@@ -22,7 +19,6 @@ import { HomeModule } from './home/home.module';
   declarations: [
     AppComponent,
     HeaderComponent
-    // FilterByName
   ],
   imports: [
     BrowserModule,

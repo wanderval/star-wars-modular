@@ -21,7 +21,12 @@
         <li *ngFor="let item of items | filterByName: textProcurado.value | sort: 'name': reverse" class="collection-item">
           <div>
             {{ item.name }}
-            <a class="secondary-content" [routerLink]="['/character', getIdFromUrl(item)]"><i class="black-text material-icons">send</i></a>
+            <a class="secondary-content" routerLink="/{{rota}}/{{getIdFromUrl(item)}}"><i class="black-text material-icons">send</i></a>
+          </div>
+        </li>
+        <li *ngIf="items.length === 0">
+          <div class="center">
+            data not found
           </div>
         </li>
     </ul>

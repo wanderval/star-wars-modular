@@ -14,22 +14,19 @@ export class CharacterComponent implements OnInit {
   characters: any[];
   title: string;
   apiName: string;
+  rota: string;
 
   constructor(private characterService: CharacterService) {
     this.title = 'Character';
     this.apiName = 'people';
+    this.rota = 'character';
   }
 
   ngOnInit() {
     this.characterService.getCharacters()
     .subscribe( (characters: Character[]) => {
       this.characters = characters;
-      console.log(characters);
     });
-    /*.subscribe(characters => {
-      this.characters = characters
-      console.log(characters);
-    });*/
   }
 
 }

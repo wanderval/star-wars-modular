@@ -18,7 +18,6 @@ describe('CharacterComponent', () => {
         SharedModule,
         HttpModule,
         CharacterModule
-        //CharacterService
       ]
     })
     .compileComponents();

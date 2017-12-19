@@ -1,5 +1,23 @@
-<p>
-  character-detail works!
-</p>
-
-{{character.name}}
+<div>
+  <h4 class="table-header yellow accent-4 black black-text">{{ title }}</h4>
+  <table class="bordered" >
+    <thead >
+      <tr>
+          <th>Name</th>
+          <th>Height</th>
+          <th>Specie</th>
+          <th>Mass</th>
+          <th>Gender</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{dataCharacter.character.name}}</td>
+        <td>{{dataCharacter.character.height}}</td>
+        <td>{{dataCharacter.specie.name}}</td>
+        <td>{{dataCharacter.character.mass}}</td>
+        <td>{{dataCharacter.character.gender}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -10,6 +10,7 @@ export class ListComponent {
   @Input() title: string;
   @Input() items: any[];
   @Input() apiName: string;
+  @Input() rota: string;
   reverse: boolean = false;
 
   constructor(private _utilsService: UtilsService) {}
@@ -27,9 +28,7 @@ export class ListComponent {
   }
 
   getIdFromUrl(item: any): number {
-    console.log('teste');
     let id = this._utilsService.retrieveIdFromUrl(item.url, this.apiName);
-    console.log('ID:', id);
     return id;
   }
 

@@ -11,9 +11,13 @@ import { StarshipService } from './starship.service';
 export class StarshipComponent implements OnInit {
   starships: any[];
   title: string;
+  apiName: string;
+  rota: string;
 
   constructor(private starshipService: StarshipService) {
     this.title = 'Starship';
+    this.apiName = "starships";
+    this.rota = 'starship';
   }
 
   ngOnInit() {
