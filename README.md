@@ -38,8 +38,8 @@ Functional Requirements
 * Must have a reverse option.
 * The app should have an item detail page.
 o This page should be accessible by clicking in the list item and by url:
-#### /characters/:id
-#### /starships/:id
+####            /characters/:id
+####            /starships/:id
 * On character detail, species should be shown.
 * On starship detail, pilots should be listed.
 * Clicking in the pilot should redirect to the character detail.
