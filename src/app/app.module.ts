@@ -6,8 +6,6 @@ import { AppComponent } from './app.component';
 import { UtilsService } from './shared/service/utils.service';
 import { AppRoutingModule } from './app.routing.module';
 import { HeaderComponent } from './header/header.component';
-// import { CharacterModule } from './character/character.module';
-// import { StarshipModule } from './starship/starship.module';
 import { HomeModule } from './home/home.module';
 
 
@@ -19,8 +17,6 @@ import { HomeModule } from './home/home.module';
   imports: [
     BrowserModule,
     HttpModule,
-    // CharacterModule,
-    // StarshipModule,
     HomeModule,
     AppRoutingModule
   ],
