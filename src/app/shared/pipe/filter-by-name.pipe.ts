@@ -1,5 +1,4 @@
 import { Pipe, PipeTransform } from '@angular/core';
-// import { CharacterComponent } from './character.component';
 
 @Pipe({
     name: 'filterByName'

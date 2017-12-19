@@ -1,29 +1,27 @@
-<!--<div>
+<div class="row">
     <h4 class="table-header yellow accent-4 black black-text">{{ title }}</h4>
     <table class="bordered" >
       <thead >
         <tr>
             <th>Name</th>
-            <th>Height</th>
-            <th>Specie</th>
-            <th>Mass</th>
-            <th>Gender</th>
+            <th>Passengers</th>
+            <th>Manufacturer</th>
+            <th>Length</th>
+            <th>Class</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>{{dataCharacter.character.name}}</td>
-          <td>{{dataCharacter.character.height}}</td>
-          <td>{{dataCharacter.specie.name}}</td>
-          <td>{{dataCharacter.character.mass}}</td>
-          <td>{{dataCharacter.character.gender}}</td>
+          <td>{{ starship?.name }}</td>
+          <td>{{ starship?.passengers }}</td>
+          <td>{{ starship?.manufacturer }}</td>
+          <td>{{ starship?.length }}</td>
+          <td>{{ starship?.starship_class }}</td>
         </tr>
       </tbody>
     </table>
   </div>
 
--->
-
-{{pilots.name}}
-
-<app-shared-list title='Pilots' [items]='pilots' apiName='people' rota='character'></app-shared-list>
+<div class="row">
+  <app-shared-list title='Pilots' [items]='pilots' apiName='people' rota='character'></app-shared-list>
+</div>

@@ -1,5 +1,5 @@
 export class Starship {
     public name: string;
-    public model: string;
+    public class: string;
     public manufacturer: string;
 }

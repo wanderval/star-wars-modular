@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { ListComponent } from './list/list.component';
-import { FilterByName } from './filter-by-name.pipe';
-import { SortPipe } from './sort.pipe';
-import { routing } from './../app-routing.module';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+
+import { ListComponent } from './component/list/list.component';
+import { FilterByName } from './pipe/filter-by-name.pipe';
+import { SortPipe } from './pipe/sort.pipe';
 
 @NgModule({
-    imports: [ BrowserModule, routing ],
     declarations: [ ListComponent, FilterByName, SortPipe ],
-    exports: [ ListComponent ]
+    imports: [ CommonModule, RouterModule ],
+    exports: [ ListComponent, RouterModule ]
 })
 export class SharedModule {}

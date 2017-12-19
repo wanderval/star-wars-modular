@@ -9,6 +9,7 @@ export class HomeCardComponent implements OnInit {
 
   @Input() title: string;
   @Input() img: string;
+  @Input() router: string;
 
   constructor() { }
 
