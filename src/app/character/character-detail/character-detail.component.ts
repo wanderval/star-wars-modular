@@ -26,7 +26,7 @@ export class CharacterDetailComponent implements OnInit {
     // get parameter id
     this.route.params.subscribe(
       (params: any) => {
-        this.id = parseInt(params['id']);
+        this.id = parseInt(params['id'], 10);
       }
     );
 
@@ -37,7 +37,7 @@ export class CharacterDetailComponent implements OnInit {
           this.dataCharacter.character = character;
           this._characterService.getCharacterSpecie(character['species'][0]).subscribe(specie => {
             this.dataCharacter.specie = specie;
-          })
+          });
       }
     );
   }

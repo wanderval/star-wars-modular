@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
-import { mergeMap } from "rxjs/operators/mergeMap";
+import { mergeMap } from 'rxjs/operators/mergeMap';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/do';
@@ -26,7 +26,7 @@ export class CharacterService {
 
     getCharacter(id: number): Observable<Character> {
         return this._http
-            .get(this.url +'/' + id)
+            .get(this.url + '/' + id)
             .map((response: Response) => response.json())
             .catch(ErrorHandler.handlerError);
     }

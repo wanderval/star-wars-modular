@@ -10,10 +10,12 @@ describe('StarshipComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ],
+      declarations: [
+        StarshipComponent
+      ],
       imports: [
         SharedModule,
-        CharacterModule
+        CharacterModule,
       ]
     })
     .compileComponents();

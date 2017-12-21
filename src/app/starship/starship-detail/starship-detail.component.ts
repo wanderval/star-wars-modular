@@ -18,7 +18,7 @@ export class StarshipDetailComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
     private _starshipService: StarshipService) {
-      this.title = "Starship";
+      this.title = 'Starship';
     }
 
   ngOnInit() {
@@ -30,7 +30,7 @@ export class StarshipDetailComponent implements OnInit {
     this.route.params
     .subscribe( (params: Params) => {
       this._starshipService.getStarshipById(params['id'])
-      .subscribe(starship => this.starship = starship)
+      .subscribe(starship => this.starship = starship);
     });
   }
 

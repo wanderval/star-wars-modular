@@ -16,7 +16,7 @@ export class SortPipe implements PipeTransform {
       }
     });
 
-    if(reverse) {
+    if (reverse) {
       array.reverse();
     }
     return array;

@@ -16,7 +16,7 @@ export class StarshipComponent implements OnInit {
 
   constructor(private starshipService: StarshipService) {
     this.title = 'Starship';
-    this.apiName = "starships";
+    this.apiName = 'starships';
     this.rota = 'starship';
   }
 

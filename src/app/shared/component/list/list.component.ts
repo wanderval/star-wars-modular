@@ -11,25 +11,26 @@ export class ListComponent {
   @Input() items: any[];
   @Input() apiName: string;
   @Input() rota: string;
-  reverse: boolean = false;
+  reverse: boolean;
 
-  constructor(private _utilsService: UtilsService) {}
+  constructor(private _utilsService: UtilsService) {
+    this.reverse = false;
+  }
 
   sortAsc() {
-    if(this.reverse) {
+    if (this.reverse) {
       this.reverse = false;
     }
   }
 
   sortDesc() {
-    if(!this.reverse) {
+    if (!this.reverse) {
       this.reverse = true;
     }
   }
 
   getIdFromUrl(item: any): number {
-    let id = this._utilsService.retrieveIdFromUrl(item.url, this.apiName);
-    return id;
+    return this._utilsService.retrieveIdFromUrl(item.url, this.apiName);
   }
 
 }

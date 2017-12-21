@@ -10,8 +10,8 @@ export class UtilsService {
   retrieveIdFromUrl(url: string, apiName: string): number {
     let id = url;
     id = id.replace(this.urlPrefix + apiName, '');
-    id = id.replace('/','');
-    return parseInt(id);
+    id = id.replace('/', '');
+    return parseInt(id, 10);
   }
 
 }

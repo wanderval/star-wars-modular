@@ -8,7 +8,6 @@ import { CharacterModule } from './character.module';
 
 describe('CharacterComponent', () => {
   let component: CharacterComponent;
-  let service: CharacterService;
   let fixture: ComponentFixture<CharacterComponent>;
 
   beforeEach(async(() => {
@@ -31,9 +30,5 @@ describe('CharacterComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
-  });
-
-  it('service should create', () => {
-    expect(service).toBeTruthy();
   });
 });
